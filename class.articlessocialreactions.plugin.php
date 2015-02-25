@@ -92,7 +92,7 @@ class ArticlesSocialReactionsPlugin extends Gdn_Plugin {
         // $article = $Sender->Article;
         $articleUrl = $Sender->CanonicalUrl();
 
-        echo '<div id="social-media-buttons"><h2 class="H">Share this Article</h2>';
+        echo '<div id="social-media-buttons"><h2 class="H">' . T('Share this Article') . '</h2>';
 
         // Facebook
         $facebook = '';
