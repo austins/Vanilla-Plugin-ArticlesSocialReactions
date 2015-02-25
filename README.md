@@ -1,6 +1,6 @@
 # Articles - Social Reactions
 
-Adds social media features to the [Articles](https://github.com/shadowdare/Vanilla-App-Articles) application.
+Adds social media features to the [Articles](https://github.com/shadowdare/Vanilla-App-Articles) application for Vanilla Forums.
 
 This application is released under the GNU GPL2 license.
 
