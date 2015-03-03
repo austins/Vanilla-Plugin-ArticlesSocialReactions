@@ -19,7 +19,7 @@
 $PluginInfo['ArticlesSocialReactions'] = array(
     'Name' => 'Articles - Social Reactions',
     'Description' => 'Adds social media features to the Articles application.',
-    'Version' => '0.9.0',
+    'Version' => '1.0.0',
     'RequiredApplications' => array('Articles' => '1.0.0'),
     'MobileFriendly' => true,
     'Author' => 'Austin S. (Shadowdare)',
