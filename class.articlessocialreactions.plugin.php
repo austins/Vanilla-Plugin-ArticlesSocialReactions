@@ -92,7 +92,8 @@ class ArticlesSocialReactionsPlugin extends Gdn_Plugin {
         // $article = $Sender->Article;
         $articleUrl = $Sender->CanonicalUrl();
 
-        echo '<div id="social-media-buttons"><h2 class="H">' . T('Share this Article') . '</h2>';
+        echo '<div id="articles-social-media-buttons" class="FormWrapper FormWrapper-Condensed BoxAfterArticle">
+            <h2 class="H">' . T('Share this Article') . '</h2>';
 
         // Facebook
         $facebook = '';
@@ -110,7 +111,7 @@ class ArticlesSocialReactionsPlugin extends Gdn_Plugin {
 
 <div class="fb-like" data-href="' . $articleUrl . '" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>';
 
-            echo Wrap($facebook, 'div', array('class' => 'social-media-button'));
+            echo Wrap($facebook, 'div', array('id' => 'articles-social-reactions-facebook', 'class' => 'articles-social-media-button'));
         }
 
         // Twitter
@@ -123,20 +124,20 @@ class ArticlesSocialReactionsPlugin extends Gdn_Plugin {
             $twitterHashtag = '';
 
         if (strlen($twitterUsername) > 0) {
-            $twitter = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' . $articleUrl . '" data-via="' . $twitterUsername . '" data-size="large" data-related="' . $twitterUsername . '" data-hashtags="' . $twitterHashtag . '">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script>';
+            $twitter = '<div id="articles-social-reactions-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="' . $articleUrl . '" data-via="' . $twitterUsername . '" data-size="large" data-related="' . $twitterUsername . '" data-hashtags="' . $twitterHashtag . '">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script></div>';
         }
 
         // Google+
         $google = '';
         if (C('Articles.TwitterUsername', false)) {
-            $google = '<script src="https://apis.google.com/js/platform.js" async defer></script>
-  <g:plusone></g:plusone>';
+            $google = '<div id="articles-social-reactions-google"><script src="https://apis.google.com/js/platform.js" async defer></script>
+  <g:plusone></g:plusone></div>';
         }
 
         // Display Twitter and Google+ sharing links on same line.
         if (($twitter !== '') || ($google !== '')) {
-            echo Wrap($twitter . $google, 'div', array('class' => 'social-media-button'));
+            echo Wrap($twitter . $google, 'div', array('class' => 'articles-social-media-button'));
         }
 
         echo '</div>';

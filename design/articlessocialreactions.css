@@ -1,3 +1,16 @@
-.social-media-button {
+.articles-social-media-button {
     margin-bottom: 8px;
+}
+
+.articles-social-media-button:last-child {
+    margin-bottom: 0;
+}
+
+#articles-social-reactions-twitter,
+#articles-social-reactions-google {
+    display: inline-block;
+}
+
+#articles-social-reactions-google {
+    margin-left: 12px;
 }
