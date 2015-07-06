@@ -1,6 +1,6 @@
 <?php defined('APPLICATION') or exit();
 /**
- * Copyright (C) 2015  Austin S. (Shadowdare)
+ * Copyright (C) 2015  Austin S.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -19,11 +19,11 @@
 $PluginInfo['ArticlesSocialReactions'] = array(
     'Name' => 'Articles - Social Reactions',
     'Description' => 'Adds social media features to the Articles application.',
-    'Version' => '1.0.0',
+    'Version' => '1.0.1',
     'RequiredApplications' => array('Articles' => '1.0.0'),
     'MobileFriendly' => true,
-    'Author' => 'Austin S. (Shadowdare)',
-    'AuthorUrl' => 'http://vanillaforums.org/profile/addons/16014/Shadowdare',
+    'Author' => 'Austin S.',
+    'AuthorUrl' => 'https://github.com/austins',
     'License' => 'GNU GPL2',
     'SettingsUrl' => '/dashboard/settings/articlessocialreactions'
 );
