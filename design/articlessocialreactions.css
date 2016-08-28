@@ -18,9 +18,9 @@
 /* Responsive mobile rules: phones vertical (tall) */
 @media only screen and (max-width: 580px) {
     /* Fix FB recommend widget overflow on small viewport width. */
-    .fb_iframe_widget,
-    .fb_iframe_widget span,
-    .fb_iframe_widget span iframe[style] {
+    #articles-social-reactions-facebook .fb_iframe_widget,
+    #articles-social-reactions-facebook .fb_iframe_widget span,
+    #articles-social-reactions-facebook .fb_iframe_widget span iframe[style] {
         overflow: hidden;
         max-width: 100%;
     }
